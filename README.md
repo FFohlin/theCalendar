@@ -35,3 +35,8 @@ Lets generate the days.
 $object->generateDays();
 $days = $object->days;
 ```
+To use this class you need to understand that the times in the visual calendar is positioned by absolute positioning. And to make the calendar as flexible as I wanted it, I use a hour-array that contains the hour position, instead of putting the total position information in each time. Look thru the example, and you will understand. Each time is positioned with hour position plus time position.
+
+```html
+$object->hours
+```
