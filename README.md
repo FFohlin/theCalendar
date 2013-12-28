@@ -18,7 +18,7 @@ $times = array(
 # (timearray, height of 15 minutes in px)	
 $object = new TheCalendar($times, 25);	
 ```
-It is possible to use a times array with different member variable names, as long as you have the start time and the length. Just send in the names in the config shown below. If you dont want to change anything, do not add it to config.
+It is possible to use a times array with different member variable names, as long as you have the start time and the length. Just send in the names in the config as shown below. If you don't want to change the values, do not add it to config.
 
 ```html
 $object->config(array(
