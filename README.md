@@ -15,7 +15,7 @@ $times = array(
     		5=>(Object)array('start' => '2011-10-10 08:00', 'length' => '45', 'title' => 'Fohlin', 'text' => '', 'color'=>'#78ae94')	
 );
 	
-# (tiderna, höjd på en kvart i px)	
+# (timearray, height of 15 minutes in px)	
 $object = new TheCalendar($times, 25);	
 ```
 It is possible to use a times array with different member variable names, as long as you have the start time and the length. Just send in the names in the config shown below. If you dont want to change anything, do not add it to config.
