@@ -66,92 +66,9 @@ $days = $object->days;
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- For all browsers -->
-	<? /*
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/mygrid.css">
-	
-	<link rel="stylesheet" href="fonts/style.css">
-	*/ ?>
+	<link rel="stylesheet" href="css/thecalendarneeds.css">
 	<link rel="stylesheet" href="css/sitestyling.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
-	
-	<style type="text/css">
-		a:hover {opacity: 0.7;}
-		#schedule {position: relative;}
-		.schedule-column {
-			float: left;
-			padding: 0 4px;
-		}
-		.day-inner {
-			background-color: #ebebed;
-		}
-		
-		.timelabel-column {
-			width: 50px;
-			text-align: right;
-		}
-		.timelabel-inner {
-			position: relative;
-			
-		}
-		.timelabel {
-			position: absolute;
-			width: 100%;
-			left: 0;
-		}
-		.timelabel span {display: block; margin-top: -6px; font-size: 12px;}
-		.schedule-day {
-			width: 25%;
-		}
-		.column-header {display: block; margin-bottom: 10px;}
-		.hours {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-		.hour {position: absolute; top: 0; left: 0; width: 100%; height: 60px; border-top: 1px solid #ddd;}
-		
-		.calendaritem {
-			display: block;
-			position: absolute;
-			border-radius: 3px;
-		}
-		
-		.calendarcontent {
-			padding: 10px;
-			overflow: visible;
-		}
-		
-		.calendarcontent h4 {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-
-		a.calendaritem.cl-1-1 {width: 100%;}
-		a.calendaritem.cl-1-2 {width: 49.5%;}
-		a.calendaritem.cl-2-2 {width: 49.5%; left: 50.5%;}
-		a.calendaritem.cl-1-3 {width: 32.667%;}
-		a.calendaritem.cl-2-3 {width: 32.667%; left: 33.667%;}
-		a.calendaritem.cl-3-3 {width: 32.667%; left: 67.334%;}
-		a.calendaritem.cl-1-4 {width: 24%;}
-		a.calendaritem.cl-2-4 {width: 24%; left: 25%;}
-		a.calendaritem.cl-3-4 {width: 24%; left: 51%;}
-		a.calendaritem.cl-4-4 {width: 24%; left: 76%;}
-		a.calendaritem.cl-1-5 {width: 20%;}
-		a.calendaritem.cl-2-5 {width: 20%; left: 20%;}
-		a.calendaritem.cl-3-5 {width: 20%; left: 40%;}
-		a.calendaritem.cl-4-5 {width: 20%; left: 60%;}
-		a.calendaritem.cl-5-5 {width: 20%; left: 80%;}
-		
-		
-	</style>
-	
-	<!--[if (lt IE 9) & (!IEMobile)]>
-	<script src="js/respond.js"></script>
-	<script src="js/selectivizr-1.0.2-min.js"></script>
-	<![endif]-->
-	
-	<!-- JavaScript -->
-	<script src="js/modernizr-2.5.3-min.js"></script>
-	
-	<!--<link rel="shortcut icon" href="/favicon.ico">-->
 </head>
 
 
@@ -177,9 +94,6 @@ $days = $object->days;
 <body>
 	
 <div id="schedule">
-	
-	<?php //echo '<pre style="position: absolute; z-index: 10;">'; print_r($object->days); echo '</pre>'; ?>
-	<?php //echo '<pre style="position: absolute; left: 400px; z-index: 10;">'; print_r($object->hours); echo '</pre>'; ?>
 	
 	<div class="timelabel-column schedule-column">
 		<span class="column-header text-bold text-size-large">&nbsp;</span>
@@ -219,48 +133,6 @@ $days = $object->days;
 	<?php } ?>
 	
 </div>	
-	
-	
-
-	
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-	
-	<? 
-	
-	//	<script src="js/niceScheme-0.1.js"></script> 
-	
-	# Framtid med javascript:
-	# I backbone vill jag sedan ha olika vyer för vecka (period), dag, tid. Så att 
-	# en dag kan uppdateras, och en tid kan uppdateras. Utan att uppdatera hela skiten.
-	# Det skulle kunna innebära att jag behöver en kollektion med dagar. Eller?
-	
-	?>
-	
-	<script>
-		$( document ).ready(function() {
-			//$('#schedule').writeSchedule();
-			
-			/*
-			var highest = 0;
-			$.each($('.schedule-day-inner'), function(  ) {
-				console.log(this);
-				var heightNeeded = $(this).find('.calendaritem').last().position().top+$(this).find('.calendaritem').last().outerHeight();
-				if(heightNeeded > highest) {
-					highest = heightNeeded;
-					$('.schedule-day-inner').css('height', heightNeeded+20);
-				}
-  			});
-  			*/
-  			
-  			//$('.day-inner').css('height', $('.hours').outerHeight());
-					
-			//$( window ).resize(function() {
-
-			});
-		});
-	</script>
 	
 </body>
 </html>
