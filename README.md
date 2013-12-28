@@ -18,12 +18,12 @@ $times = array(
 # (tiderna, höjd på en kvart i px)	
 $object = new TheCalendar($times, 25);	
 ```
-It is possible to use a times array with different member variable names, as long as you have the start time and the length. Just send in the names in the config this way:
+It is possible to use a times array with different member variable names, as long as you have the start time and the length. Just send in the names in the config shown below. If you dont want to change anything, do not add it to config.
 
 ```html
 $object->config(array(
-	'start' => 'start', 
-	'length' => 'length', 
+	'start' => 'your_starttime_name', 
+	'length' => 'your_length_name', 
 	'compressed' => true, 
 	'limitstart' => 0, // (removes hours earlier than...)
 	'limitend' => 21 // (removes hours later than...)
