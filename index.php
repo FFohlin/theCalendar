@@ -68,7 +68,6 @@ $days = $object->days;
 	<!-- For all browsers -->
 	<link rel="stylesheet" href="css/thecalendarneeds.css">
 	<link rel="stylesheet" href="css/sitestyling.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
 </head>
 
 
