@@ -29,6 +29,7 @@ $object->config(array(
 	'limitend' => 21 // (removes hours later than...)
 ));
 ```
+Lets generate the days.
 
 ```html
 $object->generateDays();
