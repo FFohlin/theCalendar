@@ -5,7 +5,7 @@ A PHP calendar visual preperation class.
 
 
 Example of use:
-<code>
+<pre><code>
 $times = array(
     		0=>(Object)array('start' => '2011-10-10 01:00', 'length' => '60', 'title' => 'Fohlin', 'text' => '', 'color'=>'#78ae94'),
     		1=>(Object)array('start' => '2011-10-10 01:20', 'length' => '60', 'title' => 'Svensson', 'text' => '', 'color'=>'#ae9c78'),
@@ -46,4 +46,4 @@ $object->config(array(
 # skapa tider...
 $object->generateDays();
 $days = $object->days;
-</code>
+</code></pre>
