@@ -42,6 +42,7 @@ $object->config(array(
 # skapa tider...
 $object->generateDays();
 $days = $object->days;
+$hourarray = $object->hours
 ?>
 
 <!doctype html>
@@ -78,7 +79,7 @@ $days = $object->days;
 	$hourcolumncontent = '';
 	$hoursinsidecolumns = '';
 	
-	foreach($object->hours as $key => $h) {
+	foreach($hourarray as $key => $h) {
 		$hourcolumncontent .= '<div class="timelabel" style="height:' .$h->length. 'px; top: ' .$h->pos. 'px">';
 		$hourcolumncontent .= '<span class="text-color-light">' .$key. '.00</span>';
 		$hourcolumncontent .= '</div>';
@@ -115,8 +116,8 @@ $days = $object->days;
 		
 			<?php
 			foreach($day->times as $t) {
-				if($object->hours[$t->hour]) {
-					echo '<a class="calendaritem ' .$t->styleclass. '" href="" style="top: ' .($object->hours[$t->hour]->pos+$t->minutepos). 'px; background-color: ' .$t->color. '; height: ' .$t->pixellength. 'px;">';
+				if($hourarray[$t->hour]) {
+					echo '<a class="calendaritem ' .$t->styleclass. '" href="" style="top: ' .($hourarray[$t->hour]->pos+$t->minutepos). 'px; background-color: ' .$t->color. '; height: ' .$t->pixellength. 'px;">';
 						echo '<div class="calendarcontent">';	
 							echo '<h4 style="margin: 0;">' .$t->title. '</h4>';
 							if($t->text) echo '<p>' .$t->text. '</p>';
