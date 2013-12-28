@@ -1,0 +1,86 @@
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+/* Font och text-styling ======================================= */
+
+a {text-decoration: none;}
+
+.header-2, 
+.header-3 {margin: 0 0 10px;}
+
+p {margin: 0 0 10px;}
+
+.text-size-small {font-size: 12px;}
+.text-size-medium {font-size: 14px;}
+.text-size-large {font-size: 18px;}
+.text-size-xlarge {font-size: 22px;}
+
+.text-light {font-weight: 300;}
+.text-regular {font-weight: 400;}
+.text-medium {font-weight: 600;}
+.text-bold {font-weight: 700;}
+
+.text-color-negative, .text-color-negative a {color: #fff;}
+.text-color-normal, a .text-color-normal {color: #000;}
+.text-color-light {color: #afafaf;}
+
+.text-align-left,
+.btn.text-align-left {text-align: left;}
+
+.icon-size-mini {font-size: 12px; font-size: 1.2rem;}
+.icon-size-small {font-size: 14px; font-size: 1.4rem;}
+.icon-size-medium {font-size: 20px; font-size: 2.0rem;}
+.icon-size-large {font-size: 30px; font-size: 3.0rem;}
+.icon-size-xlarge {font-size: 40px; font-size: 4.0rem;}
+
+.float-right {float: right;}
+
+/* Base ========================================================= */
+
+
+.content {
+	width: 96%;
+	margin: 0 auto 20px;
+}
+
+.content:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Box-styling ================================================== */
+
+
+
+.show-on-medium {display: none;}
+
+/* Media Queries ===================================== */
+
+@media only screen and (min-width: 479px) and (max-width: 639px) {
+
+}
+
+@media only screen and (min-width: 479px) {
+
+}
+
+@media only screen and (min-width: 639px) {
+
+}
+
+@media only screen and (min-width: 740px) and (max-width: 860px) {
+
+}
+
+@media only screen and (min-width: 767px) {
+
+}
+
+/* 960 och uppåt (till 1024) */
+@media only screen and (min-width: 960px) {
+
+}
