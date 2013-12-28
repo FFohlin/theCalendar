@@ -17,23 +17,20 @@ $times = array(
 	
 # (tiderna, höjd på en kvart i px)	
 $object = new TheCalendar($times, 25);	
+```
+It is possible to use a times array with different member variable names, as long as you have the start time and the length. Just send in the names in the config this way:
 
-# Om arrayns starttid och längd på eventet heter nåt annat än
-# "start" och "length" så sätts det här. Sätt bara de som inte heter 
-# som de ska. "limitstart" och "limitend" kan bara vara hela timmar, 
-# ex 3 eller 19 (från och med, till och med-tider). Det enda som görs
-# med limiten är att ta bort timmar ur $object->hours. Om man har tider
-# som borde ligga på en borttagen timma (eller rättare sagt använder
-# poisionsdata från en timma) så hamnar den alltså på 0.
+```html
 $object->config(array(
 	'start' => 'start', 
 	'length' => 'length', 
 	'compressed' => true, 
-	'limitstart' => 0, 
-	'limitend' => 21
+	'limitstart' => 0, // (removes hours earlier than...)
+	'limitend' => 21 // (removes hours later than...)
 ));
+```
 
-# skapa tider...
+```html
 $object->generateDays();
 $days = $object->days;
 ```
