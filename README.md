@@ -24,9 +24,9 @@ It is possible to use a times array with different member variable names, as lon
 $object->config(array(
 	'start' => 'your_starttime_name', 
 	'length' => 'your_length_name', 
-	'compressed' => true, 
-	'limitstart' => 0, // (removes hours earlier than...)
-	'limitend' => 21 // (removes hours later than...)
+	'compressed' => true, // unused hours is 25% height
+	'limitstart' => 0, // removes hours earlier than...
+	'limitend' => 21 // removes hours later than...
 ));
 ```
 Lets generate the days.
