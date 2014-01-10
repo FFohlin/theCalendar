@@ -106,7 +106,7 @@ $hourarray = $object->hours
 	
 		<?php foreach($days as $day) { ?>
 		
-		<div class="schedule-day schedule-column">
+		<div class="schedule-day schedule-column" style="width: <?php echo 100/count($days); ?>%;">
 			<span class="column-header">
 				<span class="text-bold text-size-large"><?php echo $day->data->dayNumber ?></span> 
 				<span class="text-color-light text-size-small"><?php echo $day->data->shortName ?></span>
