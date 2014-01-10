@@ -102,36 +102,45 @@ $hourarray = $object->hours
 		</div>
 	</div>
 	
-	<?php foreach($days as $day) { ?>
+	<div id="schedule-daywrapper">
 	
-	<div class="schedule-day schedule-column">
-		<span class="column-header">
-			<span class="text-bold text-size-large"><?php echo $day->data->dayNumber ?></span> 
-			<span class="text-color-light text-size-small"><?php echo $day->data->shortName ?></span>
-		</span>
-		<div class="day-inner schedule-day-inner" style="position: relative; height: <?php echo $totalhoursheight ?>px;">
-			<div class="hours">
-				<?php echo $hoursinsidecolumns ?>
-			</div>
+		<?php foreach($days as $day) { ?>
 		
-			<?php
-			foreach($day->times as $t) {
-				if($hourarray[$t->hour]) {
-					echo '<a class="calendaritem ' .$t->styleclass. '" href="" style="top: ' .($hourarray[$t->hour]->pos+$t->minutepos). 'px; background-color: ' .$t->color. '; height: ' .$t->pixellength. 'px;">';
-						echo '<div class="calendarcontent">';	
-							echo '<h4 style="margin: 0;">' .$t->title. '</h4>';
-							if($t->text) echo '<p>' .$t->text. '</p>';
-							echo '<p class="text-size-small">' .date('H:i', strtotime($t->start)). ' - ' .date('H:i', strtotime($t->start.'+'.($t->length).' minutes')). '</p>';
-						echo '</div>';
-					echo '</a>';
+		<div class="schedule-day schedule-column">
+			<span class="column-header">
+				<span class="text-bold text-size-large"><?php echo $day->data->dayNumber ?></span> 
+				<span class="text-color-light text-size-small"><?php echo $day->data->shortName ?></span>
+			</span>
+			<div class="day-inner schedule-day-inner" style="position: relative; height: <?php echo $totalhoursheight ?>px;">
+				<div class="hours">
+					<?php echo $hoursinsidecolumns ?>
+				</div>
+			
+				<?php
+				foreach($day->times as $t) {
+					if($object->hours[$t->hour]) {
+						echo '<a class="schedule-item ' .$t->styleclass. '" href="" style="top: ' .($object->hours[$t->hour]->pos+$t->minutepos). 'px; background-color: ' .$t->color. '; height: ' .$t->pixellength. 'px;">';
+							echo '<div class="schedule-item-content">';	
+								echo '<h4>' .$t->title. '</h4>';
+								if($t->text) echo '<p>' .$t->text. '</p>';
+								echo '<p class="text-size-small">' 
+									.date('H:i', strtotime($t->start))
+									. ' - ' 
+									.date('H:i', strtotime($t->start.'+'.($t->length).' minutes'))
+									. '</p>';
+							echo '</div>';
+						echo '</a>';
+					}
 				}
-			}
-			?>
+				?>
+			</div>
 		</div>
+		
+		<?php } ?>
+		<div style="clear: both;">
 	</div>
 	
-	<?php } ?>
-	
+	<div style="clear: both;">
 </div>	
 	
 </body>
